@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>hexo初始化使用文档</title>
+      <link href="/2025/03/11/dev-documents/hexo-init/"/>
+      <url>/2025/03/11/dev-documents/hexo-init/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="hexo-环境准备"><a href="#hexo-环境准备" class="headerlink" title="hexo 环境准备"></a>hexo 环境准备</h1><p><a href="https://hexo.io/zh-cn/docs/">hexo文档</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm init -y <span class="comment"># 初始化npm</span></span><br><span class="line">npm install -g hexo-cli <span class="comment"># 可以使用全局</span></span><br><span class="line">hexo init xhyblog</span><br><span class="line"><span class="built_in">cd</span> xhyblog</span><br><span class="line">bun install <span class="comment"># </span></span><br></pre></td></tr></table></figure><h1 id="Butterfly-安装依赖"><a href="#Butterfly-安装依赖" class="headerlink" title="Butterfly 安装依赖"></a>Butterfly 安装依赖</h1><p><a href="https://butterfly.js.org/">Butterfly文档</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 Butterfly 主题</span></span><br><span class="line"><span class="comment"># 在项目目录下运行以下命令，克隆 Butterfly 主题到 themes/butterfly 目录：</span></span><br><span class="line"><span class="comment"># /xhyblog 中 git clone</span></span><br><span class="line">git <span class="built_in">clone</span> -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure><p>Butterfly 主题依赖 Pug 和 Stylus 渲染器，需要安装以下插件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bun add hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure><h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><img src="/images/documents/hexo-framework.webp" class="" width="360" height="360"><p>打开 Hexo 的配置文件 _config.yml，将主题设置为 butterfly：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: butterfly</span><br></pre></td></tr></table></figure><h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><p>在项目目录下运行以下命令，启动本地服务器：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><p><a href="https://butterfly.js.org/posts/4aa8abbe/#%E6%90%9C%E7%B4%A2">butterfly主题配置文档</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bun add hexo-generator-search --save</span><br></pre></td></tr></table></figure><h2 id="音乐插件"><a href="#音乐插件" class="headerlink" title="音乐插件"></a>音乐插件</h2><p><a href="https://butterfly.js.org/posts/4073eda/#%E9%9F%B3%E6%A8%82">音乐插件文档</a><br><a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md">对应github</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bun add --save hexo-tag-aplayer</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术文档 </category>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>赣州之旅</title>
       <link href="/2025/03/11/travels/ganzhou/"/>
       <url>/2025/03/11/travels/ganzhou/</url>
@@ -97,7 +124,7 @@
       <link href="/2025/03/11/index/"/>
       <url>/2025/03/11/index/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>大家好，我是 <strong>小淮</strong>，一名热爱技术的全栈开发工程师。我专注于 Web 开发、用户体验设计和开源项目，致力于通过技术创造价值。</p><h2 id="个人头像"><a href="#个人头像" class="headerlink" title="个人头像"></a>个人头像</h2><p><img src="/images/avatar.png" alt="我的头像"></p><h2 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h2><ul><li><strong>2021 - 2025</strong>：江西财经大学，软件工程(VR)，本科</li><li><strong>2025 - 2028</strong>：西安电子科技大学，通信工程，硕士</li></ul><h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><ul><li><strong>2023 - 2024</strong>：腾讯，前端开发实习生<ul><li>负责公司内部管理系统的前端开发与优化。</li><li>使用 Vue.js 和 Element UI 构建高效的用户界面。</li></ul></li><li><strong>2024 - 2025</strong>：字节跳动，前端开发工程师<ul><li>参与公司核心产品的前端架构设计与开发。</li><li>主导团队技术分享，提升团队整体技术水平。</li></ul></li></ul><h2 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h2><ul><li><strong>个人博客系统</strong><ul><li>使用 Hexo 搭建个人博客，支持 Markdown 写作和主题自定义。</li><li>部署于 GitHub Pages，访问地址：<a href="https://github.com/Bin-hy">我的博客</a></li></ul></li><li><strong>在线教育平台</strong><ul><li>开发基于 React 的在线教育平台，支持课程管理和学习进度跟踪。</li><li>集成支付功能，支持用户购买课程。</li></ul></li></ul><h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2><ul><li><strong>编程语言</strong>：TypeScript、Java、Rust、Python</li><li><strong>前端框架</strong>：React、Vue.js</li><li><strong>工具</strong>：Git、Webpack、Vite</li><li><strong>设计工具</strong>：Figma、Sketch</li></ul><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul><li><strong>邮箱</strong>：<a href="mailto:&#x73;&#x65;&#95;&#104;&#x79;&#120;&#x69;&#x6f;&#110;&#103;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;">se_hyxiong@163.com</a></li><li><strong>GitHub</strong>：<a href="https://github.com/Bin-hy">Binhy</a></li></ul><hr><p>感谢阅读我的个人介绍！如果你对我的经历或项目感兴趣，欢迎联系我！</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>大家好，我是 <strong>小淮</strong>，一名热爱技术的全栈开发工程师。我专注于 Web 开发、用户体验设计和开源项目，致力于通过技术创造价值。</p><h2 id="个人头像"><a href="#个人头像" class="headerlink" title="个人头像"></a>个人头像</h2><p><img src="/images/avatar.png" alt="我的头像"></p><h2 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h2><ul><li><strong>2021 - 2025</strong>：江西财经大学，软件工程(VR)，本科</li><li><strong>2025 - 2028</strong>：西安电子科技大学，通信工程，硕士</li></ul><h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><ul><li><strong>2023 - 2024</strong>：腾讯，前端开发实习生<ul><li>负责公司内部管理系统的前端开发与优化。</li><li>使用 Vue.js 和 Element UI 构建高效的用户界面。</li></ul></li><li><strong>2024 - 2025</strong>：字节跳动，前端开发工程师<ul><li>参与公司核心产品的前端架构设计与开发。</li><li>主导团队技术分享，提升团队整体技术水平。</li></ul></li></ul><h2 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h2><ul><li><strong>个人博客系统</strong><ul><li>使用 Hexo 搭建个人博客，支持 Markdown 写作和主题自定义。</li><li>部署于 GitHub Pages，访问地址：<a href="https://github.com/Bin-hy">我的博客</a></li></ul></li><li><strong>在线教育平台</strong><ul><li>开发基于 React 的在线教育平台，支持课程管理和学习进度跟踪。</li><li>集成支付功能，支持用户购买课程。</li></ul></li></ul><h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2><ul><li><strong>编程语言</strong>：TypeScript、Java、Rust、Python</li><li><strong>前端框架</strong>：React、Vue.js</li><li><strong>工具</strong>：Git、Webpack、Vite</li><li><strong>设计工具</strong>：Figma、Sketch</li></ul><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul><li><strong>邮箱</strong>：<a href="mailto:&#115;&#101;&#95;&#x68;&#x79;&#120;&#x69;&#x6f;&#x6e;&#x67;&#64;&#x31;&#54;&#51;&#x2e;&#99;&#x6f;&#109;">se_hyxiong@163.com</a></li><li><strong>GitHub</strong>：<a href="https://github.com/Bin-hy">Binhy</a></li></ul><hr><p>感谢阅读我的个人介绍！如果你对我的经历或项目感兴趣，欢迎联系我！</p>]]></content>
       
       
       <categories>
