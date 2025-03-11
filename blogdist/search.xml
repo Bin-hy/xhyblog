@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>赣州之旅</title>
+      <link href="/2025/03/11/travels/ganzhou/"/>
+      <url>/2025/03/11/travels/ganzhou/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="选择去赣州原因"><a href="#选择去赣州原因" class="headerlink" title="选择去赣州原因"></a>选择去赣州原因</h1><p>因为好久没见小叶了，她在南昌而我在深圳，赣州作为两地之间的绝佳中点，既有便利的交通又能体验古城韵味，于是我们相约在此相聚！</p><hr><h2 id="赣州印象九宫格"><a href="#赣州印象九宫格" class="headerlink" title="赣州印象九宫格"></a>赣州印象九宫格</h2><div class="photo-grid">  <img src="/images/ganzhou/1.png" class="" width="360" height="360" title="古城墙晨雾 八境台晨景">  <img src="/images/ganzhou/2.png" class="" width="360" height="360" title="郁孤台 辛弃疾诗词墙">  <img src="/images/ganzhou/3.png" class="" width="360" height="360" title="赣州基督教 年代感教堂">    <img src="/images/ganzhou/4.png" class="" width="360" height="360" title="宋潮不夜城 海报出片">  <img src="/images/ganzhou/5.png" class="" width="360" height="360" title="宋代古城 浪漫情侣">  <img src="/images/ganzhou/6.png" class="" width="360" height="360" title="宋潮不夜城 古树">  <img src="/images/ganzhou/7.png" class="" width="360" height="360" title="赣江夜游 标准钟">  <img src="/images/ganzhou/8.png" class="" width="360" height="360" title="灶儿巷 明清古巷">  <img src="/images/ganzhou/9.png" class="" width="360" height="360" title="灶儿巷 明清古巷"></div><style>.photo-grid {  display: grid;  grid-template-columns: repeat(3, 1fr);  gap: 10px;  margin: 2rem 0;}.photo-grid img {  width: 100%;  height: auto;  border-radius: 8px;  box-shadow: 0 2px 8px rgba(0,0,0,0.1);  transition: transform 0.3s ease;}.photo-grid img:hover {  transform: scale(1.03);}@media (max-width: 768px) {  .photo-grid {    grid-template-columns: repeat(2, 1fr);  }}@media (max-width: 480px) {  .photo-grid {    grid-template-columns: 1fr;  }}</style>]]></content>
+      
+      
+      <categories>
+          
+          <category> 个人生活 </category>
+          
+          <category> 旅游 </category>
+          
+          <category> 赣州之旅 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 旅行 </tag>
+            
+            <tag> 赣州 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker 部署 minio 最佳实践</title>
+      <link href="/2025/03/11/docker-repo/minio-docker/"/>
+      <url>/2025/03/11/docker-repo/minio-docker/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="minio-的docker-compose"><a href="#minio-的docker-compose" class="headerlink" title="minio 的docker compose"></a>minio 的docker compose</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&quot;3.7&quot;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">minio:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">&quot;quay.io/minio/minio:RELEASE.2022-08-02T23-59-16Z&quot;</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;2590:2590&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;2591:2591&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;./minio/data1:/data1&quot;</span></span><br><span class="line">      <span class="comment"># - &quot;./minio/data2:/data2&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MINIO_ROOT_USER=minioadmin</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MINIO_ROOT_PASSWORD=c9jA9ZvNXLwfs6n6fog6EJ0396Q77TbEm6G1XeDQbFG02GYwBsMh5wcTeJFzquD6sYE5saMGsrLnXernC5VaxjNfUuKqZxGRh9wf</span></span><br><span class="line">      <span class="comment"># 弃用了</span></span><br><span class="line">      <span class="comment"># - MINIO_ACCESS_KEY=SBM/79pj3tpKU86dcKKPE9LDq4JHv1LxD4dxJY2aNV0Jz3HCMTatYXpFNj8fN3d0UHFQwmnnZAfpKmpdo5zd5Qw4Q671RcJsCun6376v</span></span><br><span class="line">      <span class="comment"># - MINIO_SECRET_KEY=SBM/No7M8syBVYDJDyW9ni6d5oyT1Bn7WzTsQRxQ2RrxKxg46s6BbCartAK4fss4KrWt2p3GrTTXywctNg8cvngKVXNPrK4onL7Eehdu</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">server</span> <span class="string">/data1</span> <span class="string">--console-address</span> <span class="string">&quot;:2590&quot;</span> <span class="string">--address</span> <span class="string">&quot;:2591&quot;</span> <span class="comment"># --console-address web 为界面端口 --address api请求端口</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术文档 </category>
+          
+          <category> docker-libs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Minio </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker 部署 Nginx 最佳实践</title>
+      <link href="/2025/03/11/docker-repo/nginx-docker/"/>
+      <url>/2025/03/11/docker-repo/nginx-docker/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3&#x27;</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">80</span><span class="string">:80</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">443</span><span class="string">:443</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./website/html:/usr/share/nginx/html</span></span><br><span class="line">      <span class="comment">#- /usr/local/nginx/www:/var/www</span></span><br><span class="line">      <span class="comment">#- /usr/local/nginx/logs:/var/log/nginx</span></span><br><span class="line">      <span class="comment"># 有可能会出现不能挂载，这个时候用手动拷贝配置文件就行</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./nginx.conf:/etc/nginx/nginx.conf</span></span><br><span class="line">      <span class="comment">#- /usr/local/nginx/etc/cert:/etc/nginx/cert</span></span><br><span class="line">      <span class="comment">#- /usr/local/nginx/conf.d:/etc/nginx/conf.d</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">NGINX_PORT=80</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">privileged:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">server&#123;</span><br><span class="line">       listen 80;</span><br><span class="line">       server_name localhost huai-xhy.site; # 博客路有</span><br><span class="line">       charset utf-8;</span><br><span class="line"></span><br><span class="line">       location / &#123;</span><br><span class="line">          # 此处一定要改成nginx容器中的目录地址，宿主机上的地址容器访问不到</span><br><span class="line">          # 命令必须用 root, 不能用 alias</span><br><span class="line">          root   /usr/share/nginx/html/blogdist;</span><br><span class="line">          try_files $uri $uri/ =404;</span><br><span class="line">          index  index.html index.htm;</span><br><span class="line">       &#125;</span><br><span class="line">       </span><br><span class="line">       #error_page  404              /404.html;</span><br><span class="line"></span><br><span class="line">       # redirect server error pages to the static page /50x.html</span><br><span class="line">       #</span><br><span class="line">       error_page   500 502 503 504  /50x.html;</span><br><span class="line">       location = /50x.html &#123;</span><br><span class="line">           root   html;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术文档 </category>
+          
+          <category> docker-libs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人介绍</title>
+      <link href="/2025/03/11/index/"/>
+      <url>/2025/03/11/index/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><p>大家好，我是 <strong>小淮</strong>，一名热爱技术的全栈开发工程师。我专注于 Web 开发、用户体验设计和开源项目，致力于通过技术创造价值。</p><h2 id="个人头像"><a href="#个人头像" class="headerlink" title="个人头像"></a>个人头像</h2><p><img src="/images/avatar.png" alt="我的头像"></p><h2 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h2><ul><li><strong>2021 - 2025</strong>：江西财经大学，软件工程(VR)，本科</li><li><strong>2025 - 2028</strong>：西安电子科技大学，通信工程，硕士</li></ul><h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><ul><li><strong>2023 - 2024</strong>：腾讯，前端开发实习生<ul><li>负责公司内部管理系统的前端开发与优化。</li><li>使用 Vue.js 和 Element UI 构建高效的用户界面。</li></ul></li><li><strong>2024 - 2025</strong>：字节跳动，前端开发工程师<ul><li>参与公司核心产品的前端架构设计与开发。</li><li>主导团队技术分享，提升团队整体技术水平。</li></ul></li></ul><h2 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h2><ul><li><strong>个人博客系统</strong><ul><li>使用 Hexo 搭建个人博客，支持 Markdown 写作和主题自定义。</li><li>部署于 GitHub Pages，访问地址：<a href="https://github.com/Bin-hy">我的博客</a></li></ul></li><li><strong>在线教育平台</strong><ul><li>开发基于 React 的在线教育平台，支持课程管理和学习进度跟踪。</li><li>集成支付功能，支持用户购买课程。</li></ul></li></ul><h2 id="技能"><a href="#技能" class="headerlink" title="技能"></a>技能</h2><ul><li><strong>编程语言</strong>：TypeScript、Java、Rust、Python</li><li><strong>前端框架</strong>：React、Vue.js</li><li><strong>工具</strong>：Git、Webpack、Vite</li><li><strong>设计工具</strong>：Figma、Sketch</li></ul><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul><li><strong>邮箱</strong>：<a href="mailto:&#x73;&#x65;&#95;&#104;&#x79;&#120;&#x69;&#x6f;&#110;&#103;&#64;&#x31;&#54;&#x33;&#46;&#x63;&#x6f;&#x6d;">se_hyxiong@163.com</a></li><li><strong>GitHub</strong>：<a href="https://github.com/Bin-hy">Binhy</a></li></ul><hr><p>感谢阅读我的个人介绍！如果你对我的经历或项目感兴趣，欢迎联系我！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 个人 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 自我介绍 </tag>
+            
+            <tag> 经历 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>初次来到hexo！</title>
+      <link href="/2025/03/11/hello-world/"/>
+      <url>/2025/03/11/hello-world/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>

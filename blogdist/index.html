@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="zh-cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小淮的博客 - hello,this is my website subtitle</title><meta name="author" content="小淮"><meta name="copyright" content="小淮"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#E6F7FF"><meta property="og:type" content="website">
+<meta property="og:title" content="小淮的博客">
+<meta property="og:url" content="http://bin-hy.github.io/index.html">
+<meta property="og:site_name" content="小淮的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://bin-hy.github.io/images/avatar.png">
+<meta property="article:author" content="小淮">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://bin-hy.github.io/images/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://bin-hy.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1A2B4D')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#E6F7FF')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"Author: 小淮","link":"Link: ","source":"Source: 小淮的博客","info":"Copyright belongs to the author. For commercial use, please contact the author for authorization. For non-commercial use, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"You have switched to Traditional Chinese","cht_to_chs":"You have switched to Simplified Chinese","day_to_night":"You have switched to Dark Mode","night_to_day":"You have switched to Light Mode","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小淮的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/images/bg.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">小淮的博客</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">小淮的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/03/11/travels/ganzhou/" title="赣州之旅"><img class="post-bg" src="/images/ganzhou/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="赣州之旅"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/11/travels/ganzhou/" title="赣州之旅">赣州之旅</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T08:10:30.000Z" title="Created 2025-03-11 16:10:30">2025-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/">个人生活</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/%E6%97%85%E6%B8%B8/">旅游</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/%E6%97%85%E6%B8%B8/%E8%B5%A3%E5%B7%9E%E4%B9%8B%E6%97%85/">赣州之旅</a></span></div><div class="content">选择去赣州原因因为好久没见小叶了，她在南昌而我在深圳，赣州作为两地之间的绝佳中点，既有便利的交通又能体验古城韵味，于是我们相约在此相聚！  赣州印象九宫格                                   .photo-grid {   display: grid;   grid-template-columns: repeat(3, 1fr);   gap: 10px;   margin: 2rem 0; }  .photo-grid img {   width: 100%;   height: auto;   border-radius: 8px;   box-shadow: 0 2px 8px rgba(0,0,0,0.1);   transition: transform 0.3s ease; }  .photo-grid img:hover {   transform: scale(1.03); }  @media (max-width: 768px) {   .photo-grid {     grid-template-columns:...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/docker-repo/minio-docker/" title="Docker 部署 minio 最佳实践">Docker 部署 minio 最佳实践</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T07:42:01.000Z" title="Created 2025-03-11 15:42:01">2025-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/">技术文档</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/docker-libs/">docker-libs</a></span></div><div class="content">minio 的docker compose1234567891011121314151617version: &quot;3.7&quot;services:  minio:    image: &quot;quay.io/minio/minio:RELEASE.2022-08-02T23-59-16Z&quot;    ports:      - &quot;2590:2590&quot;      - &quot;2591:2591&quot;    volumes:      - &quot;./minio/data1:/data1&quot;      # - &quot;./minio/data2:/data2&quot;    environment:      - MINIO_ROOT_USER=minioadmin      -...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/docker-repo/nginx-docker/" title="Docker 部署 Nginx 最佳实践">Docker 部署 Nginx 最佳实践</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T07:22:29.000Z" title="Created 2025-03-11 15:22:29">2025-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/">技术文档</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/docker-libs/">docker-libs</a></span></div><div class="content">123456789101112131415161718192021version: &#x27;3&#x27;services:  nginx:    restart: always    container_name: nginx    image: nginx    ports:      - 80:80      - 443:443    volumes:      - ./website/html:/usr/share/nginx/html      #- /usr/local/nginx/www:/var/www      #- /usr/local/nginx/logs:/var/log/nginx      # 有可能会出现不能挂载，这个时候用手动拷贝配置文件就行      - ./nginx.conf:/etc/nginx/nginx.conf      #- /usr/local/nginx/etc/cert:/etc/nginx/cert      #- /usr/local/nginx/conf.d:/etc/nginx/conf.d   ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/index/" title="个人介绍">个人介绍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T02:55:13.000Z" title="Created 2025-03-11 10:55:13">2025-03-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a></span></div><div class="content">个人简介大家好，我是 小淮，一名热爱技术的全栈开发工程师。我专注于 Web 开发、用户体验设计和开源项目，致力于通过技术创造价值。 个人头像 教育背景 2021 - 2025：江西财经大学，软件工程(VR)，本科 2025 - 2028：西安电子科技大学，通信工程，硕士  工作经历 2023 - 2024：腾讯，前端开发实习生 负责公司内部管理系统的前端开发与优化。 使用 Vue.js 和 Element UI 构建高效的用户界面。   2024 - 2025：字节跳动，前端开发工程师 参与公司核心产品的前端架构设计与开发。 主导团队技术分享，提升团队整体技术水平。    项目经验 个人博客系统 使用 Hexo 搭建个人博客，支持 Markdown 写作和主题自定义。 部署于 GitHub Pages，访问地址：我的博客   在线教育平台 开发基于 React...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/03/11/hello-world/" title="初次来到hexo！">初次来到hexo！</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-11T02:48:32.660Z" title="Created 2025-03-11 10:48:32">2025-03-11</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/images/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">小淮</div><div class="author-info-description">03年巨蟹座ENFJ</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Bin-hy"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/11/travels/ganzhou/" title="赣州之旅"><img src="/images/ganzhou/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="赣州之旅"/></a><div class="content"><a class="title" href="/2025/03/11/travels/ganzhou/" title="赣州之旅">赣州之旅</a><time datetime="2025-03-11T08:10:30.000Z" title="Created 2025-03-11 16:10:30">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/docker-repo/minio-docker/" title="Docker 部署 minio 最佳实践">Docker 部署 minio 最佳实践</a><time datetime="2025-03-11T07:42:01.000Z" title="Created 2025-03-11 15:42:01">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/docker-repo/nginx-docker/" title="Docker 部署 Nginx 最佳实践">Docker 部署 Nginx 最佳实践</a><time datetime="2025-03-11T07:22:29.000Z" title="Created 2025-03-11 15:22:29">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/index/" title="个人介绍">个人介绍</a><time datetime="2025-03-11T02:55:13.000Z" title="Created 2025-03-11 10:55:13">2025-03-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/11/hello-world/" title="初次来到hexo！">初次来到hexo！</a><time datetime="2025-03-11T02:48:32.660Z" title="Created 2025-03-11 10:48:32">2025-03-11</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/"><span class="card-category-list-name">个人</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/"><span class="card-category-list-name">个人生活</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/%E6%97%85%E6%B8%B8/"><span class="card-category-list-name">旅游</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/%E6%97%85%E6%B8%B8/%E8%B5%A3%E5%B7%9E%E4%B9%8B%E6%97%85/"><span class="card-category-list-name">赣州之旅</span><span class="card-category-list-count">1</span></a></li></ul></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"><span class="card-category-list-name">技术文档</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/docker-libs/"><span class="card-category-list-name">docker-libs</span><span class="card-category-list-count">2</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Docker/" style="font-size: 1.5em; color: #99a9bf">Docker</a> <a href="/tags/Nginx/" style="font-size: 1.1em; color: #999">Nginx</a> <a href="/tags/Minio/" style="font-size: 1.1em; color: #999">Minio</a> <a href="/tags/%E7%BB%8F%E5%8E%86/" style="font-size: 1.1em; color: #999">经历</a> <a href="/tags/%E8%B5%A3%E5%B7%9E/" style="font-size: 1.1em; color: #999">赣州</a> <a href="/tags/%E6%97%85%E8%A1%8C/" style="font-size: 1.1em; color: #999">旅行</a> <a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 1.1em; color: #999">自我介绍</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">5</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-11T08:36:58.426Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2025 By 小淮</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="Toggle Between Traditional and Simplified Chinese">繁</button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="小熊bb,with,小彤bb" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="输入搜索关键词" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
