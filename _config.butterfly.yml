@@ -280,7 +280,7 @@ aside:
     category: true
   card_author:
     enable: true # 是否显示作者卡片
-    description: '03年巨蟹座ENFJ' # 作者描述信息
+    description: '热 爱 可 抵 岁 月 漫 长' # 作者描述信息
     button:
       enable: true # 	是否显示按钮
       icon: fab fa-github
@@ -288,7 +288,7 @@ aside:
       link: https://github.com/Bin-hy
   card_announcement: 
     enable: true  # 是否显示公告卡片
-    content: 欢迎来到我的博客 # 公告内容 （可使用 html 标签）
+    content: 今天还是不想起床 # 公告内容 （可使用 html 标签）
   card_recent_post:
     enable: true # 是否显示最新文章卡片
     # If set 0 will show all
@@ -881,7 +881,7 @@ clickShowText:  # 点击出现文字，文字可自行修改
   enable: true
   text:
     - 小熊bb
-    - with
+    - 最喜欢小熊bb了
     - 小彤bb
   fontSize: 20px
   random: true

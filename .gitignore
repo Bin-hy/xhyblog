@@ -4,5 +4,6 @@ db.json
 *.log
 node_modules/
 blogdist/
+yztblogdist/
 .deploy*/
 _multiconfig.yml
