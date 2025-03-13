@@ -56,8 +56,8 @@ social:
 favicon: /img/favicon.png
 
 avatar:
-  img: /images/avatar.png
-  effect: false
+  img: /images/avatar-yzt.png
+  effect: true
 
 # Disable all banner images
 disable_top_img: false
@@ -738,26 +738,27 @@ site_verification:
 
 theme_color:
   enable: true
-  # 主色系（冰川蓝+电子青）
-  main: "#6C9BFF"               # 主色调-浅蓝紫色（科技感基础色）
-  paginator: "#66FFFF"          # 分页器-半透明浅青色
-  button_hover: "#B399FF"       # 按钮悬停-浅紫罗兰色（增加交互层次）
-  text_selection: "#66FFFF80"   # 文字选中-带透明度的浅青色
+  # 主色系（柔粉色系）
+  main: "#FFB6C1"               # 主色调-浅粉红（柔和基础色）
+  paginator: "#FF69B480"        # 分页器-半透明热粉色
+  button_hover: "#FF99CC"       # 按钮悬停-樱花粉（层次感）
+  text_selection: "#FFB6C180"   # 文字选中-浅粉透明
   # 辅助色系
-  link_color: "#66FFFF"         # 链接色-晶莹青色
-  meta_color: "#A0B4C6"         # 元信息-灰蓝色（降低存在感）
-  hr_color: "#B3CCFF"           # 分割线-浅蓝紫色
+  link_color: "#FF69B4"         # 链接色-经典玫红
+  meta_color: "#DDA0DD"          # 元信息-薰衣草紫（低存在感）
+  hr_color: "#FFC0CB"           # 分割线-粉红
   # 代码区块
-  code_foreground: "#6C9BFF"     # 代码文字-主色同系
-  code_background: "#F0F4FF"    # 代码背景-极浅蓝
+  code_foreground: "#FF69B4"     # 代码文字-玫红色
+  code_background: "#FFF0F5"    # 代码背景-浅粉白
   # 特殊元素
-  toc_color: "#99CCFF"          # 目录颜色-更浅的冰川蓝
-  blockquote_padding_color: "#D4E6FF"  # 引用框边框-雾蓝色
-  blockquote_background_color: "#F5FAFF" # 引用背景-近乎白色的浅蓝
+  toc_color: "#FFB6C1"          # 目录颜色-浅粉红
+  blockquote_padding_color: "#FFD9E6"  # 引用框边框-淡粉色
+  blockquote_background_color: "#FFF5F8" # 引用背景-极浅粉
   # 全局辅助
-  scrollbar_color: "#99CCFF"    # 滚动条-目录同色系
-  meta_theme_color_light: "#E6F7FF"  # 浅模式主题色-冰川白
-  meta_theme_color_dark: "#1A2B4D"   # 深色模式-深海军蓝
+  scrollbar_color: "#FFB6C1"    # 滚动条-主色同系
+  meta_theme_color_light: "#FFF0F5"  # 浅模式主题色-粉白
+  meta_theme_color_dark: "#4A2A3B"   # 深色模式-深玫瑰棕
+
 
 # The user interface setting of category and tag page
 # Choose: index - same as Homepage UI / default - same as archives UI
@@ -882,9 +883,9 @@ clickShowText:  # 点击出现文字，文字可自行修改
     - 小熊bb
     - with
     - 小彤bb
-  fontSize: 15px
-  random: false
-  mobile: false # 手机端是否显示文字
+  fontSize: 20px
+  random: true
+  mobile: true # 手机端是否显示文字
 
 # --------------------------------------
 # Lightbox Settings
@@ -904,7 +905,7 @@ lightbox: fancybox
 series:
   enable: false
   # Order by title or date
-  orderBy: 'title'
+  orderBy: 'date'
   # Sort of order. 1, asc for ascending; -1, desc for descending
   order: 1
   number: true

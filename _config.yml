@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 小淮的博客
-subtitle: 'hello,this is my website subtitle'
+title: 小彤bb的博客
+subtitle: '我的生活学习记录ye~'
 description: ''
 keywords: 
-author: 小淮
+author: 叶子彤
 language: zh-cn
 timezone: 'Asia/Shanghai'
 
@@ -23,7 +23,7 @@ pretty_urls:
 
 # Directory
 source_dir: source
-public_dir: blogdist
+public_dir: yztblogdist
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
