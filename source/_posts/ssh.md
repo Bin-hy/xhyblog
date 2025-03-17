@@ -99,8 +99,8 @@ vim ~/.ssh.config
 编辑别名
 ```
 Host myserver # 别名
-    HostName 159.75.120.92 # <ip>
+    HostName 192.168.0.1 # <ip>
     Port 22 # 端口
     User ubuntu # 用户名 <username>
-    IdentityFile /home/sbm/.ssh/id_ed25519_xhy # 私钥地址 
+    IdentityFile /home/sbm/.ssh/id_ed25519 # 私钥地址 
 ```
