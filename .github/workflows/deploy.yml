@@ -1,5 +1,5 @@
 name: Deploy Hexo to Github Pages
-run-name: Deploy XhyBlog to ${{input.deploy_target}} by @${{github.actor}}
+run-name: Deploy XhyBlog by @${{github.actor}}
 on: 
   push:
     branch:
