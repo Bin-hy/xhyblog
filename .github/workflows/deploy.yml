@@ -15,7 +15,7 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@4
+      uses: actions/checkout@v4
 
     - name: Setup Nodejs # 配置node环境
       uses: actions/setup-node@v4
