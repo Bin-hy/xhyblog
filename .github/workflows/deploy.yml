@@ -33,7 +33,7 @@ jobs:
         hexo generate
     
     - name: Configure SSH
-      uses: actions/checkout@v4
+      uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SERVER_SSH_USER }}
