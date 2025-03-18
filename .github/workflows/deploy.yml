@@ -45,4 +45,4 @@ jobs:
         port: ${{ secrets.SERVER_SSH_PORT }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         source: blogdist/*
-        target: /home/ubuntu/dockers/nginx/html/
+        target: /home/ubuntu/dockers/nginx/website/html/
