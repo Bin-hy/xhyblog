@@ -37,6 +37,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SERVER_SSH_USER }}
+        port: ${{ secrets.SERVER_SSH_PORT }}
         key: ${{ secrets.SERVER_SSH_KEY }}
         source: blogdist
         target: /home/ubuntu/dockers/nginx/html/
