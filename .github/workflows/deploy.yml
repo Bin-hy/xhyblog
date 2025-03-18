@@ -31,13 +31,18 @@ jobs:
       run: | 
         hexo clean 
         hexo generate
-    
+
     - name: Configure SSH
+      uses: webfactory/ssh-agent@v0.7.0  # 使用 ssh-agent 管理密钥
+      with:
+        ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
+
+    - name: Deploy via scp
       uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SERVER_SSH_USER }}
         port: ${{ secrets.SERVER_SSH_PORT }}
         key: ${{ secrets.SERVER_SSH_KEY }}
-        source: blogdist
+        source: blogdist/*
         target: /home/ubuntu/dockers/nginx/html/
