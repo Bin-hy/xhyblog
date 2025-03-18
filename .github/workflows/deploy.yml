@@ -1,6 +1,6 @@
 name: Deploy Hexo to Github Pages
 run-name: Deploy XhyBlog to ${{input.deploy_target}} by @${{github.actor}}
-On: 
+on: 
   push:
     branch:
       - feat/workflows # 监听分支操作
