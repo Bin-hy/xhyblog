@@ -4,37 +4,33 @@ on:
   push:
     branch:
       - feat/workflows # 监听分支操作
+      - feat/xhyblog
 
 jobs:
   build-and-deploy: # 任务 ： 构建部署
     runs-on: ubuntu-latest
-    strategy:
-      matrix: 
-        node-version :
-          - 18.19.1
-        bun-version:
-          - 1.2.2
+    # strategy:
+    #   matrix: 
+    #     node-version :
+    #       - 18.19.1
+    #     bun-version:
+    #       - 1.2.2
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # - name: Setup Nodejs # 配置node环境
-    #   uses: actions/setup-node@v4
-    #   with:
-    #     node-version: '${{matrix.node-version}}'
-    - name: Setup bun
+    - name: Setup bun # 配置node环境
       uses: oven-sh/setup-bun@v2
       with:
         bun-version: latest
 
-    - name: Install Dependencies
+    - name: Install Dependencies # 安装 hexo依赖
       run : | 
-        # npm install -g hexo-cli
-        # npm install
         bun add -g hexo-cli
         bun install
-    - name: Generate Static Files
+
+    - name: Generate Static Files # 生成文件
       run: | 
         hexo clean 
         hexo generate
