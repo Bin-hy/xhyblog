@@ -9,8 +9,8 @@ categories:
   - 收藏文章
   - 大爸子
 keywords:
-top_img:
-cover:
+top_img: /images/collections/yexin/cover.jpg
+cover: /images/collections/yexin/cover.jpg
 ---
 
 <h1 align="center"><b>高大的虾农</b></h1>
@@ -70,6 +70,8 @@ cover:
 
 &nbsp;&nbsp;&nbsp;&nbsp;“旧年赚四万，今年差不多能有五万。”虾农用手比划，满脸幸福地回答，“主要原因是我们县的龙虾面积越来越多，有三十万亩，种虾、饲料、农机价钱越来越便宜。”
 
+<img src="/images/collections/yexin/drone.jpg" alt="无人机助农" style="width: 100%; height: auto; display: block; object-fit: cover;">
+
 &nbsp;&nbsp;&nbsp;&nbsp;“我看到别人用无人机下饲料，你怎么用人工啊？”
 
 &nbsp;&nbsp;&nbsp;&nbsp;“用无人机的都是大户，养了几千亩，本大利大。我小打小闹，反正力是呆的，去了就来。”虾农已经走进虾田，水没过皮裤的大腿处，身旁飘着一个红色的大盆，。“诶，老板，我还冇说价钱。今天早上是一十三，这个价钱可以莫？”
@@ -120,8 +122,33 @@ cover:
 
 &nbsp;&nbsp;&nbsp;&nbsp;把钱付了，我抬头看着他，胡子拉碴，被太阳照着，脸上红彤彤的，一点也不黑。
 
-&nbsp;&nbsp;&nbsp;&nbsp;提着袋子走向小车，不远处的路早已通了。回过头看看，他真的很高大。
+&nbsp;&nbsp;&nbsp;&nbsp;提着袋子走向小车，不远处的路早已通了。
+&nbsp;&nbsp;&nbsp;&nbsp;（原载于《九江广播电视报》2025年5月26日05版）
 &nbsp;&nbsp;&nbsp;&nbsp;(作者简介：叶新，江西永修人，1973年11月出生，九江市作家协会会员，供职于永修县财政局。)
+
+# 公众号发文了！！
+<div style="
+    display: flex;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--card-bg, #fff); /* 适应主题背景 */
+">
+    <div style="flex: 1; padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+        <h3 style="margin-top: 0; margin-bottom: 10px;"><a href="https://mp.weixin.qq.com/s/CHJGyGXFY7C2QcYNbLBjAA" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">高大的虾农</a></h3>
+        <p style="font-size: 0.9em; color: var(--font-color, #555); margin-bottom: 10px;">作者：松山往来人</p>
+        <div style="font-size: 0.8em; color: var(--font-color, #888);">
+            <a href="https://www.163.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">来源：微信公众号</a>
+        </div>
+    </div>
+    <div style="width: 150px; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <a href="https://www.163.com/dy/article/K0R027SA0521DB4A.html" target="_blank" rel="noopener noreferrer">
+            <img src="/images/collections/yexin/yexin-image.jpg" alt="松山往来人" style="width: 100%; height: auto; display: block; object-fit: cover;">
+        </a>
+    </div>
+</div>
 
 # 相关书评
 <div style="
@@ -141,9 +168,6 @@ cover:
             <a href="https://www.163.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">来源：网易新闻</a>
         </div>
     </div>
-    <!-- <div style="width: 150px; height: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-        <a href="https://www.163.com/dy/article/K0R027SA0521DB4A.html" target="_blank" rel="noopener noreferrer">
-            <img src="/images/article-thumbnail.jpg" alt="福建舰" style="width: 100%; height: auto; display: block; object-fit: cover;">
-        </a>
-    </div> -->
 </div>
+
+
