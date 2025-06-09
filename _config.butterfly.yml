@@ -637,8 +637,8 @@ remark42:
 # https://artalk.js.org/guide/frontend/config.html
 artalk:
   enable: true
-  server: https://live777.huai-xhy.site # <-- 你的 Artalk 后端对外地址，与 ATK_SITE_URL 一致
-  site: huai-xhy.site # # <-- 你的博客主页地址，与 ATK_SITE_DEFAULT 一致
+  server: https://artalk.huai-xhy.site # 'https://artalk.huai-xhy.site' # <-- 你的 Artalk 后端对外地址，与 ATK_SITE_URL 一致
+  site: 我的小淮博客 # # <-- 你的博客主页地址，与 ATK_SITE_DEFAULT 一致
   # Use Artalk visitor count as the page view count
   visitor: true
   option:

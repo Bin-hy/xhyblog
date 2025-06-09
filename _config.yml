@@ -4,7 +4,7 @@
 
 # Site
 title: 小淮的博客
-subtitle: 'hello,this is my website subtitle'
+subtitle: '学习与生活分享'
 description: ''
 keywords: 
 author: 小淮
@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://Bin-hy.github.io
+url: https://Bin-hy.github.com
 # root: /
 permalink: :title/
 permalink_defaults:
