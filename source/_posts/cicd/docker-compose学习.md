@@ -12,6 +12,8 @@ top_img: # /images/ganzhou/1.png # 建议添加顶部横幅图
 description: docker-compose编写语法 
 cover: # /images/ganzhou/1.png
 ---
+## cnb 链接
+[CNB教程](https://cnb.cool/Bin-hy/docker-exercises/-/blob/main/5_compose/README.md)
 
 ## 深入浅出 Docker Compose：一键部署多容器应用的利器
 
