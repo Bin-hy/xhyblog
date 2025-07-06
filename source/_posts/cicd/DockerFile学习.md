@@ -13,6 +13,8 @@ cover: # /images/ganzhou/1.png
 ---
 
 # Dockerfile学习
+## cnb 链接
+[CNB教程](https://cnb.cool/Bin-hy/docker-exercises/-/blob/main/2_dockerfile/README.md)
 ## 掌握 Dockerfile：从零到一的全面学习指南
 
 如果你正在容器化的世界里探索，那么 **Dockerfile** 绝对是你需要深入理解的核心工具。它是一个文本文件，包含了一系列指令，Docker 可以根据这些指令自动构建镜像。掌握 Dockerfile 不仅能让你更好地控制镜像的构建过程，还能帮助你优化镜像大小、提高部署效率。
