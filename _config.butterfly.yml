@@ -258,9 +258,10 @@ footer:
   owner:
     enable: true
     since: 2025
-  custom_text:
-  # Copyright of theme and framework
+  custom_text: <a href="https://beian.miit.gov.cn/"><span>备案号：赣ICP备2024034240号</span></a>
+    # Copyright of theme and framework
   copyright: true
+
 
 # --------------------------------------
 # Aside Settings
