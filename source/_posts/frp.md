@@ -8,14 +8,15 @@ tags: [FRP, Hexo, Linux, Systemd, 教程]
 
 ---
 
-## FRP 路径
+## 文档
+[FRP 文档](https://gofrp.org/zh-cn/docs/setup/)
+[FRP 安装包](https://github.com/fatedier/frp/releases)
 
 FRP 安装路径示例：
-
-`/etc/frp/` 为 FRP 安装路径，包含 `frps` 和 `frpc` 可执行文件，以及配置文件 `frps.toml` 和 `frpc.toml`。
+> `/etc/frp/` 为 FRP 安装路径，包含 `frps` 和 `frpc` 可执行文件，以及配置文件 `frps.toml` 和 `frpc.toml`。
 
 ## FRP 服务器端配置 (frps)
-1. systemd 配置
+### 1. systemd 配置
 
 创建 frps.service 文件：
 
@@ -44,7 +45,7 @@ RestartSec = 5s
 WantedBy = multi-user.target
 ```
 
-2. frps.toml 配置示例
+### 2. frps.toml 配置示例
 ```toml
 bindPort = 7000
 auth.token = "xionghaoyi"
@@ -60,29 +61,29 @@ allowPorts = [
 ]
 ```
 
-3. systemd 指令管理 FRP
-# 启动 FRP
+### 3. systemd 指令管理 FRP
+#### 启动 FRP
 ```bash
 sudo systemctl start frps
 ```
 
-# 停止 FRP
+#### 停止 FRP
 ```bash
 sudo systemctl stop frps
 ```
 
-# 重启 FRP
+#### 重启 FRP
 ```bash
 sudo systemctl restart frps
 ```
 
-# 查看 FRP 状态
+#### 查看 FRP 状态
 ```bash
 sudo systemctl status frps
 ```
 
-FRP 客户端配置 (frpc)
-1. frpc.toml 配置示例
+## FRP 客户端配置 (frpc)
+### 1. frpc.toml 配置示例
 ```toml
 serverAddr = "frp.xxbb.space"
 serverPort = 7000
@@ -97,7 +98,7 @@ localPort = 22
 remotePort = 7001
 ```
 
-2. systemd 配置（客户端开机自启）
+### 2. systemd 配置（客户端开机自启）
 
 创建 frpc.service 文件：
 ```bash
@@ -125,28 +126,28 @@ RestartSec = 5s
 WantedBy = multi-user.target
 ```
 
-3. systemd 指令管理 FRP 客户端
-# 设置开机自启
+### 3. systemd 指令管理 FRP 客户端
+#### 设置开机自启
 ```bash
 sudo systemctl enable frpc
 ```
 
-# 启动 FRP 客户端
+#### 启动 FRP 客户端
 ```bash
 sudo systemctl start frpc
 ```
 
-# 停止 FRP 客户端
+#### 停止 FRP 客户端
 ```bash
 sudo systemctl stop frpc
 ```
 
-# 重启 FRP 客户端
+#### 重启 FRP 客户端
 ```bash
 sudo systemctl restart frpc
 ```
 
-# 查看状态
+#### 查看状态
 ```bash
 sudo systemctl status frpc
 ```
