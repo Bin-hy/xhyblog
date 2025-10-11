@@ -1,12 +1,9 @@
 ---
-title: FRP 服务器与客户端配置及 systemd 自启
+title: FRP 配置及 systemd 自启实现内网穿透
 date: 2025-10-10
-tags: [FRP, Hexo, Linux, Systemd, 教程]
+tags: [FRP, Hexo, Linux, Systemd, 内网穿透, 教程]
 ---
-
-本文整理了 FRP (Fast Reverse Proxy) 的服务器端与客户端配置，并提供 systemd 开机自启的配置示例，方便在 Linux 系统上使用。
-
----
+> 本文整理了 FRP 的服务器端与客户端配置，并提供 systemd 开机自启的配置示例，方便在 Linux 系统上使用。
 
 ## 文档
 [FRP 文档](https://gofrp.org/zh-cn/docs/setup/)
@@ -47,15 +44,16 @@ WantedBy = multi-user.target
 
 ### 2. frps.toml 配置示例
 ```toml
-bindPort = 7000
-auth.token = "xionghaoyi"
+bindPort = 7000 # 填写frps配置的端口
+auth.token = "auth-token" # 填写自己的token
 
 # 默认为 127.0.0.1，如果需要公网访问，修改为 0.0.0.0
 webServer.addr = "0.0.0.0"
-webServer.port = 7500
-webServer.user = "admin"
-webServer.password = "admin"
+webServer.port = 7500 # 管理界面端口，启动frps后，可通过 http://ip:7500 访问
+webServer.user = "admin" # 管理界面用户名
+webServer.password = "admin" # 管理界面密码
 
+# 允许的端口范围，可根据需要修改
 allowPorts = [
     { start = 7001, end = 7100 },
 ]
@@ -85,17 +83,17 @@ sudo systemctl status frps
 ## FRP 客户端配置 (frpc)
 ### 1. frpc.toml 配置示例
 ```toml
-serverAddr = "frp.xxbb.space"
-serverPort = 7000
+serverAddr = "www.xxx.com 或者 xxx.xxx.xxx.xxx" # 填写frps服务器的IP地址或域名
+serverPort = 7000 # 填写frps配置的端口
 auth.method = "token"
-auth.token = "xionghaoyi"
+auth.token = "auth-token" # 填写frps配置的token
 
 [[proxies]]
-name = "orangepi-zhaomingyan-1"
+name = "device-${port}" # 这个端口代理的名称
 type = "tcp"
 localIP = "127.0.0.1"
-localPort = 22
-remotePort = 7001
+localPort = 22 # $ {port} ，代理出去的端口
+remotePort = 7001 # frps 服务器映射的端口 
 ```
 
 ### 2. systemd 配置（客户端开机自启）
