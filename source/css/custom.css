@@ -1,0 +1,149 @@
+/* Custom UI polish for Butterfly theme */
+
+/* Header banner mask for better readability */
+#page-header::before,
+.page-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26,43,77,0.55), rgba(26,43,77,0.25));
+  pointer-events: none;
+}
+
+/* Site title font and subtle glow */
+.site-title,
+.header-title a {
+  font-family: 'Noto Serif SC', serif;
+  letter-spacing: 0.5px;
+}
+
+/* Recent post cards */
+#recent-posts .recent-post-item,
+.recent-post-item {
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(108, 155, 255, 0.18);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+  background-color: rgba(255, 255, 255, 0.86);
+}
+
+.recent-post-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(108, 155, 255, 0.25);
+}
+
+/* Sidebar glassy look */
+#aside-content,
+.sidebar {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 14px;
+}
+
+/* Avatar enhancement */
+.card-info-avatar img,
+.avatar img,
+.site-author-image {
+  border-radius: 50% !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(102, 255, 255, 0.5);
+}
+
+/* Buttons hover color harmonized with theme */
+button,
+.btn,
+.button {
+  transition: background-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover,
+.button:hover,
+button:hover {
+  box-shadow: 0 8px 18px rgba(179, 153, 255, 0.35);
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] #recent-posts .recent-post-item,
+[data-theme='dark'] .recent-post-item {
+  background-color: rgba(25, 25, 35, 0.55);
+}
+
+[data-theme='dark'] #aside-content,
+[data-theme='dark'] .sidebar {
+  background: rgba(20, 20, 30, 0.5);
+}
+
+/* Rightside tools soft rounding */
+#rightside {
+  border-radius: 10px;
+}
+
+/* Link color align with theme */
+a:hover {
+  color: #66FFFF;
+}
+
+/* Improve tag cloud aesthetics */
+.tag-cloud a {
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: rgba(240, 244, 255, 0.7);
+}
+
+[data-theme='dark'] .tag-cloud a {
+  background: rgba(40, 50, 80, 0.5);
+}
+
+/* 技术栈 Pin 卡片样式 */
+.pin-card {
+  margin-top: 8px;
+  padding: 12px 12px 10px;
+  border-radius: 12px;
+  background: var(--card-bg, rgba(255,255,255,0.75));
+  backdrop-filter: saturate(180%) blur(8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+.pin-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.pin-title i { color: var(--theme-color, #4f46e5); margin-right: 6px; }
+.pin-section { margin: 8px 0; }
+.pin-label {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--text-secondary, #666);
+  margin-right: 6px;
+}
+.pin-badge {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 0 8px;
+  border-radius: 10px;
+  background: rgba(79,70,229,0.08);
+  color: #333;
+  margin: 3px 4px;
+}
+.pin-badge i { margin-right: 4px; }
+.pin-note { font-size: 12px; color: var(--text-secondary, #666); margin-top: 6px; }
+
+/* 深色模式适配 */
+[data-theme="dark"] .pin-card {
+  background: rgba(30,30,30,0.6);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+[data-theme="dark"] .pin-badge {
+  background: rgba(79,70,229,0.18);
+  color: #ddd;
+}
+
+/* 链接型徽章样式 */
+.pin-link {
+  text-decoration: none;
+}
+.pin-link:hover {
+  background: rgba(79,70,229,0.18);
+  color: var(--text-color, #222);
+}

@@ -15,13 +15,16 @@ nav:
   logo:
   display_title: true
   # Whether to fix navigation bar
-  fixed: false
+  fixed: true
 
 menu:
   Home: / || fas fa-home
-  # List||fas fa-list:
-  #   Music: /music/ || fas fa-music
-  #   Movie: /movies/ || fas fa-video
+  频道||fas fa-list:
+    频道首页: /channels/ || fas fa-th-large
+    旅行: /categories/旅游/ || fas fa-plane
+    技术文档: /categories/技术文档/ || fas fa-code
+    个人生活: /categories/个人生活/ || fas fa-user
+    所有分类: /categories/ || fas fa-folder-open
 
 # --------------------------------------
 # Code Blocks Settings 代码块设置
@@ -63,10 +66,10 @@ avatar:
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img: /images/bg.png
+default_top_img: /images/blogbg.jpg
 
 # The banner image of index page
-index_img: /images/bg.png
+index_img: /images/blogbg.jpg
 # The banner image of archive page
 archive_img:
 
@@ -91,7 +94,7 @@ footer_img: false
 
 # Website Background
 # Can set it to color or image url
-background:
+background: url(/images/blogbg.jpg) center/cover no-repeat fixed
 
 cover:
   # Disable the cover or not
@@ -125,7 +128,7 @@ post_meta:
     label: true
   post:
     # Choose: left / center
-    position: left
+    position: center
     # Choose: created / updated / both
     date_type: both
     # Choose: date / relative
@@ -147,7 +150,7 @@ index_top_img_height:
 
 # The subtitle on homepage
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect
   effect: true
   # Customize typed.js
@@ -173,7 +176,7 @@ subtitle:
 # 5: Info displayed on the cover
 # 6: Masonry layout - Cover on top, info on the bottom
 # 7: Masonry layout - Info displayed on the cover
-index_layout: 3
+index_layout: 6
 
 # Display the article introduction on homepage
 # 1: description
@@ -274,14 +277,14 @@ aside:
   button: true # 是否显示隐藏侧边栏的按钮
   mobile: true # 是否在移动端显示侧边栏
   # Position: left / right
-  position: right
+  position: left
   display:
     archive: true
     tag: true
     category: true
   card_author:
     enable: true # 是否显示作者卡片
-    description: '03年巨蟹座ENFJ' # 作者描述信息
+    description: '全栈个人开发者' # 作者描述信息
     button:
       enable: true # 	是否显示按钮
       icon: fab fa-github
@@ -289,7 +292,42 @@ aside:
       link: https://github.com/Bin-hy
   card_announcement: 
     enable: true  # 是否显示公告卡片
-    content: 欢迎来到我的博客 # 公告内容 （可使用 html 标签）
+    content: |
+      <div class="pin-card">
+        <div class="pin-title">
+          <i class="fas fa-thumbtack"></i>
+          技术栈（Tech Stack）
+        </div>
+        <div class="pin-section">
+          <span class="pin-label">后端</span>
+          <span class="pin-badge">Go / Gin</span>
+          <span class="pin-badge">Rust / Axum</span>
+        </div>
+        <div class="pin-section">
+          <span class="pin-label">前端</span>
+          <span class="pin-badge"><i class="fab fa-vuejs"></i> Vue 3</span>
+          <span class="pin-badge"><i class="fab fa-react"></i> React</span>
+          <span class="pin-badge">Vite</span>
+          <span class="pin-badge">WebComponent</span>
+          <span class="pin-badge">Naive UI / Element Plus</span>
+        </div>
+        <div class="pin-section">
+          <span class="pin-label">AI / RAG</span>
+          <span class="pin-badge">Embeddings: OpenAI / 本地模型</span>
+        </div>
+        <div class="pin-section">
+          <span class="pin-label">DevOps</span>
+          <span class="pin-badge"><i class="fab fa-docker"></i> Docker</span>
+          <span class="pin-badge">Nginx</span>
+          <span class="pin-badge"><i class="fas fa-robot"></i> GitHub Actions</span>
+          <span class="pin-badge"><i class="fas fa-network-wired"></i> FRP</span>
+          <span class="pin-badge">Cloudflare</span>
+        </div>
+        <div class="pin-section">
+          <span class="pin-label">定位</span>
+          <span class="pin-badge"><i class="fas fa-user-astronaut"></i> 全栈个人开发者</span>
+        </div>
+      </div>
   card_recent_post:
     enable: true # 是否显示最新文章卡片
     # If set 0 will show all
@@ -383,13 +421,13 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start:
   end:
 
 # Show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
@@ -765,8 +803,8 @@ theme_color:
 # The user interface setting of category and tag page
 # Choose: index - same as Homepage UI / default - same as archives UI
 # leave it empty or index
-category_ui:
-tag_ui:
+category_ui: index
+tag_ui: index
 
 # Rounded corners for UI elements
 rounded_corners_ui: true
@@ -781,13 +819,13 @@ mask:
 
 # Loading Animation
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
+  pace_css_url: https://cdn.jsdelivr.net/npm/pace-js@latest/themes/blue/pace-theme-minimal.css
 
 # Page Transition
 enter_transitions: true
@@ -810,13 +848,13 @@ beautify:
 font:
   global_font_size:
   code_font_size:
-  font_family:
+  font_family: "'Noto Sans SC', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
   code_font_family:
 
 # Font settings for the site title and site subtitle
 blog_title_font:
-  font_link:
-  font_family:
+  font_link: https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap
+  font_family: "'Noto Serif SC', serif"
 
 # The setting of divider icon
 hr_icon:
@@ -1036,7 +1074,7 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     # - <script src="xxxx"></script>
 

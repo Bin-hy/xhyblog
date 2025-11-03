@@ -26,5 +26,8 @@
         "hexo-tag-aplayer": "^3.0.4",
         "hexo-theme-butterfly": "^5.3.5",
         "hexo-theme-landscape": "^1.0.0"
+    },
+    "devDependencies": {
+        "hexo-cli": "^4.3.2"
     }
 }
