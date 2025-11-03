@@ -147,3 +147,63 @@ a:hover {
   background: rgba(79,70,229,0.18);
   color: var(--text-color, #222);
 }
+
+/* ===== 背景增强：图案 + 渐变光晕（不引入额外 JS） ===== */
+/* Butterfly 在配置 background 时会注入 #web_bg 容器，这里在其上叠加装饰层 */
+#web_bg::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  /* 轻微网格图案 + 柔和主题渐变 */
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1.2px),
+    linear-gradient(120deg, rgba(79,70,229,0.06), rgba(79,70,229,0.02));
+  background-size: 22px 22px, 100% 100%;
+  mix-blend-mode: overlay;
+}
+
+/* 右下角渐变光晕，制造层次与空间感 */
+#web_bg::before {
+  content: '';
+  position: fixed;
+  right: -12vw;
+  bottom: -10vw;
+  width: 36vw;
+  height: 36vw;
+  pointer-events: none;
+  background: radial-gradient(closest-side, rgba(79,70,229,0.16), transparent 72%);
+  filter: blur(18px);
+  animation: floatBlob 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatBlob {
+  from { transform: translate(-2vw, 1vw) scale(1); }
+  to { transform: translate(2vw, -1vw) scale(1.08); }
+}
+
+/* 暗色模式下加深对比与色度 */
+[data-theme='dark'] #web_bg::after {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.2px),
+    linear-gradient(120deg, rgba(79,70,229,0.10), rgba(79,70,229,0.04));
+}
+[data-theme='dark'] #web_bg::before {
+  background: radial-gradient(closest-side, rgba(79,70,229,0.22), transparent 72%);
+  filter: blur(22px);
+}
+
+/* 移动端适配：降低装饰强度，避免遮挡内容 */
+@media (max-width: 768px) {
+  #web_bg::after {
+    background-size: 20px 20px, 100% 100%;
+    opacity: 0.9;
+  }
+  #web_bg::before {
+    right: -18vw;
+    bottom: -16vw;
+    width: 44vw;
+    height: 44vw;
+    filter: blur(16px);
+  }
+}
