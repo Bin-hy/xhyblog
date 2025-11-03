@@ -19,6 +19,7 @@ nav:
 
 menu:
   Home: / || fas fa-home
+  留言板: /guestbook/ || fas fa-comment-dots
   频道||fas fa-list:
     频道首页: /channels/ || fas fa-th-large
     旅行: /categories/旅游/ || fas fa-plane
