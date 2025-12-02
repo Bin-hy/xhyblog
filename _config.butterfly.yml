@@ -24,6 +24,7 @@ menu:
     频道首页: /channels/ || fas fa-th-large
     旅行: /categories/旅游/ || fas fa-plane
     技术文档: /categories/技术文档/ || fas fa-code
+    面试经验: /categories/面试经验/ || fas fa-user-tie
     个人生活: /categories/个人生活/ || fas fa-user
     所有分类: /categories/ || fas fa-folder-open
 
