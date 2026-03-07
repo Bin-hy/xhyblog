@@ -1,31 +1,37 @@
 ---
 title: 个人介绍
 date: 2025-03-11 10:55:13
+updated: 2026-03-07 10:00:00
 categories: 个人
 tags: [自我介绍, 经历]
 description: 这是我的个人介绍页面，包含我的头像、经历描述等内容。
-avatar: /images/avatar.png  # 个人头像路径
+avatar: /images/self-image.jpg
 comments: false
 ---
 
-## 个人简介
-大家好，我是 **小叶**，一个爱好开发的小程序媛。我专注于 Web 开发，致力于通过技术创造价值，同时也喜爱金融相关知识，现在在备考上财中，有喜欢的朋友可以一起学习。
+# 嗨，我是小叶！👋
 
-## 个人头像
-<img src="/images/self-image.jpg" alt="我的头像" height="200px">
+欢迎来到我的个人博客。这里是我记录学习心得、技术探索和生活点滴的小角落。
 
-## 教育背景
-- **2021 - 2025**：江西财经大学，本科
+### 🎓 关于我
+- **背景**：江西财经大学在读，金融与计算机双修。
+- **定位**：一个在金融圈里折腾代码，在代码堆里思考金融的“小程序媛”。
+- **坐标**：江西
 
-## 技能
-- **编程语言**：Python、TypeScript、Java、Rust
-- **前端框架**：React、Vue.js
-- **工具**：Git、Vite、docker、K8s
+### 💻 技术栈
+- **语言**：Python, TypeScript, Java, SQL, Shell
+- **AI**：RAG, 图神经网络 GNN
+- **工具**：Linux, Git, Docker, K8s, Vite
 
-## 联系方式
-- **邮箱**：se_hyxiong@163.com
-- **GitHub**：[Binhy](https://github.com/Bin-hy)
+### 🌟 博客初衷
+在金融科技（FinTech）的浪潮中，我们常常被各种高大上的术语和复杂的算法包围。
+我希望通过这个博客，用最平实、最“人工”的语言，把那些看起来高深莫测的知识拆解开来。
+
+
+### 📬 联系我
+如果你对金融量化、大模型应用或者纯粹想交流学习心得，欢迎留言或通过以下方式找到我：
+- **Github**: [Binhy](https://github.com/Bin-hy)
+- **Email**: [3424646955@qq.com](mailto:3424646955@qq.com)
 
 ---
-
-感谢阅读我的个人介绍！如果你对我的经历或项目感兴趣，欢迎联系我！
+*“保持好奇，保持热爱。”*
