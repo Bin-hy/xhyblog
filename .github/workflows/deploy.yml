@@ -3,8 +3,9 @@ run-name: Deploy XhyBlog by @${{github.actor}}
 on: 
   push:
     branch:
-      - feat/workflows # 监听分支操作
-      - feat/xhyblog
+      - deploy
+      # - feat/workflows # 监听分支操作
+      # - feat/xhyblog
 
 jobs:
   build-and-deploy: # 任务 ： 构建部署
