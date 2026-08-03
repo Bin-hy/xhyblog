@@ -1,0 +1,52 @@
+name: Deploy Hexo to Github Pages
+run-name: Deploy XhyBlog by @${{github.actor}}
+on: 
+  push:
+    branch:
+      - deploy
+      # - feat/workflows # 监听分支操作
+      # - feat/xhyblog
+
+jobs:
+  build-and-deploy: # 任务 ： 构建部署
+    runs-on: ubuntu-latest
+    # strategy:
+    #   matrix: 
+    #     node-version :
+    #       - 18.19.1
+    #     bun-version:
+    #       - 1.2.2
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup bun # 配置node环境
+      uses: oven-sh/setup-bun@v2
+      with:
+        bun-version: latest
+
+    - name: Install Dependencies # 安装 hexo依赖
+      run : | 
+        bun add -g hexo-cli
+        bun install
+
+    - name: Generate Static Files # 生成文件
+      run: | 
+        hexo clean 
+        hexo generate
+
+    - name: Configure SSH
+      uses: webfactory/ssh-agent@v0.7.0  # 使用 ssh-agent 管理密钥
+      with:
+        ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
+
+    - name: Deploy via scp
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.SERVER_SSH_USER }}
+        port: ${{ secrets.SERVER_SSH_PORT }}
+        key: ${{ secrets.SERVER_SSH_KEY }}
+        source: blogdist/*
+        target: /home/ubuntu/dockers/nginx/website/html/
