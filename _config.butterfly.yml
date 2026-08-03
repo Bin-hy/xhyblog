@@ -1111,8 +1111,8 @@ CDN:
     # algolia_search:
     # aplayer_css:
     # aplayer_js:
-    # artalk_css:
-    # artalk_js:
+    artalk_css: https://cdn.jsdelivr.net/npm/artalk@2.10.0/dist/Artalk.min.css
+    artalk_js: https://cdn.jsdelivr.net/npm/artalk@2.10.0/dist/Artalk.min.js
     # blueimp_md5:
     # busuanzi:
     # canvas_fluttering_ribbon:
