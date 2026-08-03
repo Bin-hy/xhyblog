@@ -23,6 +23,7 @@ menu:
   频道||fas fa-list:
     频道首页: /channels/ || fas fa-th-large
     旅行: /categories/旅游/ || fas fa-plane
+    旅行相册: /album/ || fas fa-images
     技术文档: /categories/技术文档/ || fas fa-code
     面试经验: /categories/面试经验/ || fas fa-user-tie
     个人生活: /categories/个人生活/ || fas fa-user
@@ -1079,6 +1080,7 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css">
   bottom:
     - <script src="/js/techstack-pin.js"></script>
+    - <script src="/js/photo-album.js"></script>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     - <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
     - <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
